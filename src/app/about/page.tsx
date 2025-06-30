@@ -40,7 +40,11 @@ export default function About() {
       </motion.section>
 
       {/* Skills */}
-      <motion.section className="mb-20" {...fadeIn} transition={{ delay: 0.2 }}>
+      <motion.section
+        className="mb-20"
+        {...fadeIn}
+        transition={{ delay: 0.2 as const }}
+      >
         <motion.h2 className="section-title mb-10 text-center" {...fadeInUp}>
           Skills
         </motion.h2>
@@ -50,6 +54,7 @@ export default function About() {
           initial="initial"
           animate="animate"
         >
+          {/* Languages */}
           <motion.div
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
             variants={fadeInUp}
@@ -58,8 +63,8 @@ export default function About() {
             <FaCode className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">Languages</h3>
             <ul className="text-secondary space-y-2">
-              <li>C++ </li>
-              <li>Python </li>
+              <li>C++</li>
+              <li>Python</li>
               <li>JavaScript</li>
               <li>TypeScript</li>
             </ul>
@@ -75,7 +80,7 @@ export default function About() {
             <h3 className="text-xl font-semibold mb-2">Frontend</h3>
             <ul className="text-secondary space-y-2">
               <li>React.js</li>
-              <li> Next.js</li>
+              <li>Next.js</li>
               <li>Tailwind CSS / Vite</li>
               <li>HTML5 / CSS3</li>
               <li>Bootstrap</li>
@@ -110,8 +115,8 @@ export default function About() {
             <ul className="text-secondary space-y-2">
               <li>MongoDB</li>
               <li>MySQL</li>
-              <li>Neon DB (Used with basic PostgreSQL)</li>
-              <li>Firebase Auth </li>
+              <li>Neon DB (PostgreSQL basics)</li>
+              <li>Firebase Auth</li>
             </ul>
           </motion.div>
 
@@ -124,15 +129,16 @@ export default function About() {
             <FaToolbox className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">Tools & Others</h3>
             <ul className="text-secondary space-y-2">
-              <li>VS-Code </li>
-              <li>Version Control (Git, GitHub)</li>
-              <li>Postman </li>
-              <li>Render and Vercel (Deployment )</li>
+              <li>VS Code</li>
+              <li>Git, GitHub</li>
+              <li>Postman</li>
+              <li>Render, Vercel (Deployment)</li>
               <li>Vapi AI</li>
-              <li>Stream SDK </li>
+              <li>Stream SDK</li>
             </ul>
           </motion.div>
 
+          {/* Concepts */}
           <motion.div
             className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
             variants={fadeInUp}
@@ -141,106 +147,76 @@ export default function About() {
             <FaBrain className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">Core Concepts</h3>
             <ul className="text-secondary space-y-2">
-              <li>Object-Oriented Programming (OOP)</li>
-              <li>Database Management Systems (DBMS)</li>
-              <li>Data Structures & Algorithms (DSA - C++)</li>
-              <li>System Design Fundamentals</li>
+              <li>OOP</li>
+              <li>DBMS</li>
+              <li>DSA (C++)</li>
+              <li>System Design</li>
             </ul>
           </motion.div>
         </motion.div>
       </motion.section>
 
-      {/* Journey Section with Animated Cards */}
-      <motion.section className="mb-20" {...fadeIn} transition={{ delay: 0.4 }}>
+      {/* Journey */}
+      <motion.section
+        className="mb-20"
+        {...fadeIn}
+        transition={{ delay: 0.4 as const }}
+      >
         <motion.h2 className="section-title mb-10 text-center" {...fadeInUp}>
           What I’ve Been Doing
         </motion.h2>
-
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto"
           variants={staggerContainer}
           initial="initial"
           animate="animate"
         >
-          {/* Card 1 */}
-          <motion.div
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
-            variants={fadeInUp}
-            {...cardHover}
-          >
-            <h3 className="text-xl font-semibold mb-2 text-primary">
-              Real-time Full Stack Projects
-            </h3>
-            <p className="text-secondary leading-relaxed">
-              Built full-fledged applications like:
-              <br />
+          {[
+            {
+              title: "Real-time Full Stack Projects",
+              desc: `Built full-fledged applications like:
               • AI Voice Medical Assistant
-              <br />
               • AI Voice Interview Preparation
-              <br />
               • E-Commerce Bookstore
-              <br />
-              • Real-time Chat App with Video Call
-              <br />
-              These projects solve real-world problems and are built with modern
-              tech stacks.
-            </p>
-          </motion.div>
-
-          {/* Card 2 */}
-          <motion.div
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
-            variants={fadeInUp}
-            {...cardHover}
-          >
-            <h3 className="text-xl font-semibold mb-2 text-primary">
-              Self-Learning & Growth
-            </h3>
-            <p className="text-secondary leading-relaxed">
-              Actively learning advanced concepts in system design, deployment,
-              DevOps, and scalable application architecture. I continuously
-              challenge myself through personal projects and open-source
-              contributions to strengthen my engineering mindset.
-            </p>
-          </motion.div>
-
-          {/* Card 3 */}
-          <motion.div
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
-            variants={fadeInUp}
-            {...cardHover}
-          >
-            <h3 className="text-xl font-semibold mb-2 text-primary">
-              UI/UX Practice
-            </h3>
-            <p className="text-secondary leading-relaxed">
-              Focused on building clean, responsive, and user-friendly
-              interfaces. Practicing UI patterns, animations, and accessibility
-              in each project to enhance user experience.
-            </p>
-          </motion.div>
-
-          {/* Card 4 */}
-          <motion.div
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
-            variants={fadeInUp}
-            {...cardHover}
-          >
-            <h3 className="text-xl font-semibold mb-2 text-primary">
-              Career Building
-            </h3>
-            <p className="text-secondary leading-relaxed">
-              Preparing for full stack internships and roles by mastering DSA in
-              C++, building resume-ready projects, and contributing to technical
-              discussions. Focused on communication skills, system-level
-              thinking, and project ownership.
-            </p>
-          </motion.div>
+              • Real-time Chat App with Video Call`,
+            },
+            {
+              title: "Self-Learning & Growth",
+              desc: `Actively learning system design, DevOps, and scalable architecture. Continuously growing through projects and open-source.`,
+            },
+            {
+              title: "UI/UX Practice",
+              desc: `Focusing on clean, accessible interfaces with animations and responsiveness.`,
+            },
+            {
+              title: "Career Building",
+              desc: `Mastering DSA in C++, building real-world projects, and improving communication.`,
+            },
+          ].map((item, idx) => (
+            <motion.div
+              key={idx}
+              className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+              variants={fadeInUp}
+              {...cardHover}
+            >
+              <h3 className="text-xl font-semibold mb-2 text-primary">
+                {item.title}
+              </h3>
+              <p className="text-secondary leading-relaxed">
+                {item.desc.split("\n").map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
+              </p>
+            </motion.div>
+          ))}
         </motion.div>
       </motion.section>
 
       {/* Education */}
-      <motion.section {...fadeIn} transition={{ delay: 0.6 }}>
+      <motion.section {...fadeIn} transition={{ delay: 0.6 as const }}>
         <motion.h2 className="section-title mb-10 text-center" {...fadeInUp}>
           Education
         </motion.h2>
@@ -263,10 +239,9 @@ export default function About() {
               2022 - Present
             </p>
             <p className="text-secondary">
-              Currently pursuing B.Tech with a focus on Full Stack Development,
-              Software Engineering, and real-time application building. Actively
-              building projects and preparing for high-growth career
-              opportunities.
+              Pursuing B.Tech with focus on full-stack development, software
+              engineering, and real-time applications. Preparing for high-growth
+              career roles.
             </p>
           </motion.div>
         </motion.div>
