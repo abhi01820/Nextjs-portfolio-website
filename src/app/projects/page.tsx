@@ -4,9 +4,10 @@ import { projects } from "@/contents/project";
 import Image from "next/image";
 import Link from "next/link";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
-const containerVariants = {
+// ✅ Correctly typed animation variants
+const containerVariants: Variants = {
   hidden: {},
   show: {
     transition: {
@@ -15,14 +16,14 @@ const containerVariants = {
   },
 };
 
-const bubbleVariants = {
+const bubbleVariants: Variants = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
   show: {
     opacity: 1,
     y: 0,
     scale: 1,
     transition: {
-      type: "spring",
+      type: "spring" as const, // ✅ This fixes the type error
       stiffness: 100,
       damping: 15,
     },
@@ -34,7 +35,7 @@ const Projects = () => {
     <div className="container max-w-7xl mx-auto py-20">
       <h1 className="text-4xl font-bold mb-4 text-center">My Projects</h1>
       <p className="text-lg text-secondary mb-24 text-center">
-        here are some of my recent projects. Click on the links to view the code or live demo
+        Here are some of my recent projects. Click on the links to view the code or live demo.
       </p>
 
       <motion.div
