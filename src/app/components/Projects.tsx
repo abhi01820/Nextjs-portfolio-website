@@ -5,9 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   show: {
     transition: {
@@ -16,14 +16,14 @@ const containerVariants = {
   },
 };
 
-const bubbleVariants = {
+const bubbleVariants: Variants = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
   show: {
     opacity: 1,
     y: 0,
     scale: 1,
     transition: {
-      type: 'spring',
+      type: 'spring' as const, // ✅ fixed typing
       stiffness: 80,
       damping: 12,
     },
@@ -40,7 +40,7 @@ const Projects = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.1 }} // ✅ Mobile-safe viewport detection
+        viewport={{ once: false, amount: 0.1 }}
       >
         {projects.map((project) => (
           <motion.article
@@ -48,7 +48,7 @@ const Projects = () => {
             variants={bubbleVariants}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.1 }} // ✅ Ensures animation triggers on mobile
+            viewport={{ once: false, amount: 0.1 }}
             className="bg-white/60 dark:bg-dark/50 backdrop-blur-md rounded-3xl p-6 shadow-md hover:shadow-2xl transform transition duration-300 hover:scale-105"
           >
             {/* Image */}
