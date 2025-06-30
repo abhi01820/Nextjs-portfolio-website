@@ -236,7 +236,7 @@ export default function About() {
             </h3>
             <p className="text-primary mb-2">
               Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad •
-              2022 - Present
+              2023 - Present
             </p>
             <p className="text-secondary">
               Pursuing B.Tech with focus on full-stack development, software
