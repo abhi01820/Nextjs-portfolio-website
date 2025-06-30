@@ -2,9 +2,6 @@
 
 import {
   FaCode,
-  FaLaptopCode,
-  FaGraduationCap,
-  FaCodeBranch,
   FaPaintBrush,
   FaServer,
   FaDatabase,
