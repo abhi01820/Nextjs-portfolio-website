@@ -132,6 +132,7 @@ export default function About() {
               <li>VS Code</li>
               <li>Git, GitHub</li>
               <li>Postman</li>
+              <li>Clerk</li>
               <li>Render, Vercel (Deployment)</li>
               <li>Vapi AI</li>
               <li>Stream SDK</li>
