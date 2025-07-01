@@ -3,8 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter ,FaFileDownload, FaProjectDiagram } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
+import { } from "react-icons/fa";
+import { MdContactMail } from "react-icons/md";
+
 
 const Hero = () => {
   return (
@@ -76,20 +79,33 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/projects"
-              className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/70 transition-colors w-full sm:w-auto text-center"
-            >
-              View Projects
-            </Link>
-            <Link
-              href="/contact"
-              className="bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-800 hover:text-primary transition-colors w-full sm:w-auto text-center"
-            >
-              Contact Me
-            </Link>
-          </div>
+<div className="flex flex-col sm:flex-row flex-wrap gap-4">
+  <Link
+    href="/projects"
+    className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/70 transition-colors w-full sm:w-auto text-center flex items-center justify-center gap-2"
+  >
+    <FaProjectDiagram className="text-lg" />
+    View Projects
+  </Link>
+
+  <Link
+    href="/contact"
+    className="bg-gray-500 text-white px-6 py-3 rounded-lg hover:bg-gray-800 hover:text-primary transition-colors w-full sm:w-auto text-center flex items-center justify-center gap-2"
+  >
+    <MdContactMail className="text-lg" />
+    Contact Me
+  </Link>
+
+  <a
+    href="/resume.pdf"
+    download
+    className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors w-full sm:w-auto text-center flex items-center justify-center gap-2"
+  >
+    <FaFileDownload className="text-lg" />
+    Download Resume
+  </a>
+</div>
+
         </div>
       </div>
     </section>
