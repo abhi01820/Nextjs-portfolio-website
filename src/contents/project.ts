@@ -18,7 +18,7 @@ export const projects: Project[] = [
     ],
     githubLink: "https://github.com/abhi01820/AI_Voice_Medical_Agent",
     demoLink: "https://ai-voice-medical-agent-y2na.vercel.app",
-    image: "/projects/project4.jpg",
+    image: "/projects/project4.png",
   },
   {
     title: "AI Voice Mock Interview",
