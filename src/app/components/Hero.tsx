@@ -90,7 +90,7 @@ const Hero = () => {
               <FaGithub />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/m-abhilash-b2a903355/"
+              href="https://www.linkedin.com/in/abhilash-mekala-b2a903355/"
               className="text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300"
             >
               <FaLinkedin />
