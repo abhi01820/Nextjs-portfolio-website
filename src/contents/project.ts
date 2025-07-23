@@ -75,22 +75,6 @@ export const projects: Project[] = [
     image: "/projects/project1.png",
   },
 {
-  title: "🌐 Personal Portfolio Website",
-  description:
-    "A visually engaging portfolio website built using Next.js, Tailwind CSS, and Framer Motion. It showcases developer projects, skills, and education in a responsive and modern layout. Includes smooth animations, dark mode, and fully responsive UI to highlight engineering capabilities.",
-  technologies: [
-    "Next.js",
-    "Tailwind CSS",
-    "Framer Motion",
-    "React Icons",
-    "TypeScript",
-    "Vercel"
-  ],
-  githubLink: "https://github.com/abhi01820/Nextjs-portfolio-website",
-  demoLink: "https://nextjs-portfolio-website-dun.vercel.app/",
-  image: "/projects/project5.png"
-},
-{
   title: "SPREADSHEET MANAGEMENT UI",
   description:
     "A responsive, Google Sheets–inspired spreadsheet UI built with React, TypeScript, and Tailwind CSS. Features include editable tables, search/filtering, toolbar actions, and modular sidebar navigation. Demonstrates skills in scalable UI architecture, stateful interactions, and advanced table rendering with @tanstack/react-table.",
